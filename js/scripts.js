@@ -1,5 +1,6 @@
 
 $(function () {
+  'use strict';
   var $span = $('span');
   $span.each(function (index, element) {
       if (index % 2 == 0) {
@@ -18,4 +19,4 @@ $(function () {
   $('button').click(function () {
     alert($(this).attr('data-tmp'));
   });
-});//
+});
