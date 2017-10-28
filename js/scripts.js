@@ -1,20 +1,21 @@
 
-$(function (){
-  var span = $("span");
-  span.each(function (index, element) {
-      if ( index % 2 == 0) {
+$(function () {
+  var $span = $('span');
+  $span.each(function (index, element) {
+      if (index % 2 == 0) {
         $(element).css('color', 'red');
       }
-  });
-  $("span:odd").css('color','blue');
+    });
 
-  var paragraphs = $('p');
-  paragraphs.each(function (index, element){
+  $('span:odd').css('color', 'blue');
+
+  var $paragraphs = $('p');
+  $paragraphs.each(function (index, element) {
     var button = '<button class="btn" data-tmp="' + index + '">Click me</button>';
     $(element).append(button);
-    console.log(element);
   });
-  $("button").click(function () {
-    alert($(this).attr("data-tmp"));
+
+  $('button').click(function () {
+    alert($(this).attr('data-tmp'));
   });
 });//
